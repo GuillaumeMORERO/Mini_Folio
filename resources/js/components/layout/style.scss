@@ -1,0 +1,110 @@
+@import '../variables';
+
+.header {
+    border-bottom: 1px solid $color3;
+    background-color: $color1;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+    color: $color4;
+    position: fixed;
+    &-title {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-appName {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    &-bold {
+        font-weight: bold;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.MuiPaper-root {
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    width: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-self: center;
+}
+
+a {
+    padding: 0 1em;
+}
+
+.btnValid {
+    background-color: $color1 !important;
+    color: $color4 !important;
+    box-shadow: 2px 2px 5px $color3_transparent !important;
+    margin-top: 1em !important;
+    &:hover{
+        box-shadow: none !important;
+    }
+}
+
+.uler {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.sideNav {
+    min-height: 100vh;
+    width: 80px;
+    background-color: $color1;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    position: fixed !important;
+    &-linkNav {
+        padding: 1em .5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.botNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid $color3;
+    width: -webkit-fill-available;
+    height: 64px;
+    background-color: $color1;
+    position: fixed;
+    bottom: 0;
+    &-linkNav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        font-size: .8em;
+        padding: .5em;
+    }
+}
+
+
+@media ( max-width: 768px ) { //mobile
+    .secondTitle {
+        display: none;
+    }
+}
+@media ( min-width: 768px ) { //desktop
+    .sideNav {
+        position: absolute;
+        top: 62px;
+        left: 0;
+    }
+}

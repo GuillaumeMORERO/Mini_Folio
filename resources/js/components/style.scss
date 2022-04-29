@@ -1,0 +1,155 @@
+@import 'variables';
+
+#racine {
+    p, a, h1, h2, h3, h4, h5, h6 {
+        color: $color4;
+    }
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    padding: 1em;
+}
+.marger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#uler {
+    display: flex;
+    justify-content: space-around;
+}
+
+.display-name {
+    text-align: center;
+}
+
+ul {
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    li {
+        list-style-type: none;
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margins */
+    }
+}
+
+.box-card-header {
+    background-color: $color2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h6, h4, p {
+        color: $color5 !important;
+    } 
+}
+
+.cardShadower{
+    border: 1px solid $color5;
+    box-shadow: 5px 5px 5px $color3_transparent !important;
+}
+
+.boxSpinner {
+    margin-top: 2em;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 200px;
+    // position: 'absolute';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(black, transparent);
+    border: 1px solid $color5_transparent;
+    // zIndex: 1000
+}
+
+.navBtn {
+    color: $color4;
+    background-color: transparent;
+}
+
+.MuiPaper-root {
+    background-color: #000000e4 !important;
+}
+.MuiInputBase-input-MuiInput-input {
+    color: $color4;
+}
+.MuiPagination-ul {
+    li {
+        border: 1px solid #00B899; 
+        border-radius: 5px;
+        margin: 0.2em;
+        button, div {
+            color: $color4;
+        }
+    }
+}
+
+.modalStyle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400;
+    background-color: $color1;
+    border: 2px solid $color4;
+    color: $color4;
+    h2 {
+        text-align: center;
+        margin-top: 2em;
+    }
+    p {
+        padding: 2em;
+    }
+};
+.modalStyleFilmDetail {
+    // width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // transform: translate(-50%, -50%);
+    transform: translate(-50%, -17%);
+    border: 2px solid $color4;
+    .MuiPaper-root{
+        color: $color4 !important;
+        h2,h3,h4,h5,h6 {
+            text-align: center;
+            margin-top: 2em;
+        }
+        p {
+            padding: 2em;
+        }
+    }
+}
+
+@media ( max-width: 768px ) { // mobile
+    .MuiTypography-root {
+        font-size: .8em !important;
+    }
+    .cardFilm {
+        width: 95%;
+    }
+}
+
+@media ( min-width: 768px ) { // desktop
+    #router {
+        margin-left: 80px;
+    }
+    .itemLister {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .cardFilm {
+        width: 48%;
+    }
+    
+}
