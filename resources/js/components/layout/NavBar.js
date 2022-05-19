@@ -26,7 +26,15 @@ export default function navBar({isMobile}) {
             <NavLink to="/livres" activeClassName="is-active" activeStyle={{fontSize: "1.1em",color: "#F9F871", backgroundColor: '#006384' }} className={`${navStyle}-linkNav`}><MenuBookIcon fontSize="small" />{btn('livres')}</NavLink>
             <NavLink to="/jv" activeClassName="is-active" activeStyle={{fontSize: "1.1em",color: "#F9F871", backgroundColor: '#006384' }} className={`${navStyle}-linkNav`}><VideogameAssetIcon fontSize="small" />{btn('jv')}</NavLink>
             <NavLink to="/films" activeClassName="is-active" activeStyle={{fontSize: "1.1em",color: "#F9F871", backgroundColor: '#006384' }} className={`${navStyle}-linkNav`}><MovieIcon fontSize="small" />{btn('films')}</NavLink>
-            <NavLink to="/liens" activeClassName="is-active" activeStyle={{fontSize: "1.1em",color: "#F9F871", backgroundColor: '#006384' }} className={`${navStyle}-linkNav`}><LinkIcon fontSize="small" />{btn('links')}</NavLink>
+            <NavLink 
+                to="/liens" 
+                activeClassName="is-active" 
+                activeStyle={{fontSize: "1.1em",color: "#F9F871", backgroundColor: '#006384' }} 
+                className={`${navStyle}-linkNav`}
+            >
+                    <LinkIcon fontSize="small" />
+                    {btn('links')}
+            </NavLink>
         </div>
     );
 }

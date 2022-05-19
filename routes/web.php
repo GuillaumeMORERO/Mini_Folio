@@ -28,3 +28,6 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('in
 Route::any('{query}', 
   function() { return redirect('/'); })
   ->where('query', '.*');
+
+// ou plus simplement :
+// Route::view('/{path?}', 'app');
